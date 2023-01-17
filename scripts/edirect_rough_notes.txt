@@ -1,0 +1,7 @@
+
+####
+esearch -db pubmed -query "ribosome+profiling[Title/Abstract]" | efetch -format docsum | xtract -pattern DocumentSummary -element Id Title #Returns tab-delimited ID 	title 
+#for all papers with "ribosome profiling" in the title 
+]
+
+
