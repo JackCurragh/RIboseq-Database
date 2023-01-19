@@ -13,6 +13,7 @@ Accession,Title,Organism,Samples,SRA,Release_Date,All_protocols,seq_types,GSE,GS
 
 import argparse
 from Bio import Entrez
+import pandas as pd
 
 def run_search(term: str ='Ribo-Seq[All Fields]', retmax: int=10) -> list:
     '''
@@ -63,22 +64,22 @@ def fetch_study_information(gds_ids: list) -> dict:
     for id in gds_ids:
         handle = Entrez.esummary(db="gds", id=id)
         records = Entrez.read(handle)
-        for i in records[0]:
-            print(i, records[0][i])
-        study_information["Accession"].append(records[0]["Accession"])
-        study_information["Organism"].append(records[0]["taxon"])
-        study_information["Title"].append(records[0]["title"])
-        study_information["Samples"].append(int(records[0]["n_samples"]))
+        study_information["Accession"].append(f'{records[0]["Accession"]}')
+        study_information["Organism"].append(f'{records[0]["taxon"]}')
+        study_information["Title"].append(f'{records[0]["title"]}')
+        study_information["Samples"].append(f'{int(records[0]["n_samples"])}')
         # study_information["SRA"].append(records[0]["TargetFTPLink"])
-        study_information["Release_Date"].append(records[0]["PDAT"])
-        study_information["All_protocols"].append(records[0]["summary"])
-        study_information["seq_types"].append(records[0]["gdsType"])
+        study_information["Release_Date"].append(f'{records[0]["PDAT"]}')
+        study_information["All_protocols"].append(f'{records[0]["summary"]}')
+        study_information["seq_types"].append(f'{records[0]["gdsType"]}')
         study_information["GSE"].append(f"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE{records[0]['GSE']}")
-        study_information["GSE_Supplementary"].append(f"ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE{records[0]['GSE'][:-3]}nnn/GSE{records[0]['GSE']}/suppl/")
-        print(study_information["GSE_Supplementary"])
-        break
+        study_information["GSE_Supplementary"].append(f"{records[0]['FTPLink']}suppl/")
+        study_information["BioProject"].append(f"https://www.ncbi.nlm.nih.gov/bioproject/{records[0]['Projects']}")
+        study_information["PMID"].append(f'{records[0]["PubMedIds"]}')
 
 
+
+    return study_information
         
 
 
@@ -122,7 +123,13 @@ def main(args):
                     "PMC": [], 
                     "journal": []}
     gds_list = run_search()
-    fetch_study_information(gds_list)
+    study_information = fetch_study_information(gds_list)
+    length = len(study_information["Accession"])
+    for i in study_information:
+        while len(study_information[i]) != length:
+            study_information[i].append("NA")
+
+    print(pd.DataFrame(study_information)['PMID'])
 
 
 if __name__ == "__main__":

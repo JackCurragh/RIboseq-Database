@@ -5,3 +5,9 @@ esearch -db pubmed -query "ribosome+profiling[Title/Abstract]" | efetch -format 
 ]
 
 
+esearch -db geoprofiles -query "Ribosome profiling" | efetch -format docsum | xtract -pattern DocumentSummary -element Id title taxon
+
+
+
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gds&
+
