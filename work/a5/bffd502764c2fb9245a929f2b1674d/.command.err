@@ -1,0 +1,15 @@
+--2023-02-13 14:12:46--  ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE157nnn/GSE157423/miniml/GSE157423_family.xml.tgz
+           => ‘GSE157423_family.xml.tgz’
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 130.14.250.10, 130.14.250.7, 2607:f220:41e:250::10, ...
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.10|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /geo/series/GSE157nnn/GSE157423/miniml ... done.
+==> SIZE GSE157423_family.xml.tgz ... 4325
+==> PASV ... done.    ==> RETR GSE157423_family.xml.tgz ... done.
+Length: 4325 (4.2K) (unauthoritative)
+
+     0K ....                                                  100%  138M=0s
+
+2023-02-13 14:12:47 (138 MB/s) - ‘GSE157423_family.xml.tgz’ saved [4325]
+

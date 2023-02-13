@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Jianjun</First><Last>Chen</Last></Person>
+    <Email>jianchen@coh.org</Email>
+    <Phone>6262185591</Phone>
+    <Laboratory>Chen Lab</Laboratory>
+    <Department>Systems Biology</Department>
+    <Organization>Beckman Research Institute of City of Hope</Organization>
+    <Address>
+      <Line>1218 S. 5th Ave., Room 2062</Line>
+      <City>Monrovia</City>
+      <State>CA</State>
+      <Zip-Code>91016</Zip-Code>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Rui</First><Last>Su</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib4">
+    <Person><First>Lei</First><Last>Dong</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL16791">
+    <Status database="GEO">
+      <Submission-Date>2013-03-14</Submission-Date>
+      <Release-Date>2013-03-14</Release-Date>
+      <Last-Update-Date>2019-03-27</Last-Update-Date>
+    </Status>
+    <Title>Illumina HiSeq 2500 (Homo sapiens)</Title>
+    <Accession database="GEO">GPL16791</Accession>
+    <Technology>high-throughput sequencing</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="9606">Homo sapiens</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM4744693">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgNS.input</Title>
+    <Accession database="GEO">GSM4744693</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+Input RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+Negative control sgRNA
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+Negative control sgRNA input
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896292" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001615" />
+  </Sample>
+
+  <Sample iid="GSM4744694">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgNS.ribo</Title>
+    <Accession database="GEO">GSM4744694</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+ribosome footprint RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+Negative control sgRNA
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+Negative control sgRNA ribo-seq
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896291" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001616" />
+  </Sample>
+
+  <Sample iid="GSM4744695">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgMETTL16-1.input</Title>
+    <Accession database="GEO">GSM4744695</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+Input RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+sgMETTL16
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+sgMETTL16-1 input
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896290" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001617" />
+  </Sample>
+
+  <Sample iid="GSM4744696">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgMETTL16-1.ribo</Title>
+    <Accession database="GEO">GSM4744696</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+ribosome footprint RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+sgMETTL16
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+sgMETTL16-1 ribo-seq
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896289" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001618" />
+  </Sample>
+
+  <Sample iid="GSM4744697">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgMETTL16-2.input</Title>
+    <Accession database="GEO">GSM4744697</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+Input RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+sgMETTL16
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+sgMETTL16-2 input
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896333" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001619" />
+  </Sample>
+
+  <Sample iid="GSM4744698">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgMETTL16-2.ribo</Title>
+    <Accession database="GEO">GSM4744698</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+ribosome footprint RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+sgMETTL16
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+sgMETTL16-2 ribo-seq
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896332" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001620" />
+  </Sample>
+
+  <Sample iid="GSM4744699">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgMETTL16-3.input</Title>
+    <Accession database="GEO">GSM4744699</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+Input RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+sgMETTL16
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+sgMETTL16-3 input
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896331" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001621" />
+  </Sample>
+
+  <Sample iid="GSM4744700">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>sgMETTL16-3.ribo</Title>
+    <Accession database="GEO">GSM4744700</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>embryonic kidney</Source>
+      <Organism taxid="9606">Homo sapiens</Organism>
+      <Characteristics tag="cell line">
+HEK293T
+      </Characteristics>
+      <Characteristics tag="rna fragment">
+ribosome footprint RNA
+      </Characteristics>
+      <Characteristics tag="guide rna">
+sgMETTL16
+      </Characteristics>
+      <Treatment-Protocol>
+The cells were treated with 100 μg/ml cycloheximide for 5 min at 37 ℃ to prevent translation before standard ribosome profiling protocol.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The Cas9 single clone of HEK293T cells with sgRNA against METTL16 (and scramble control) were expanded in DMEM medium with 10% FBS, 1 X penicillin-streptomycin, plasmocin prophylactic, 10 ug/ml blasticidin, and 2 ug/ml puromycin for at least one week and the cells were collected at 70-80% confluency in 150 mm dish.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+The ribosomes from the cell lysates were collected by ultracentrifugation and the ribosome footprints (17-34nts) were recovered from polyacrylamide TBE-Urea gel.
+The end structures of the RNA fragments were repaired by T4 polynucleotide kinase (T4 PNK, M0201S, New England Biolabs): (1) 3’ end healing reaction (10 μl): 7 μl RNA sample, 1 μl 10×T4 PNK buffer, 1 μl T4 PNK, and 1 μl SUPERase In RNase Inhibitor were mixed and incubated for 1 h at 37 ℃; (2) 5’-end phosphorylation: 1 μl 10 mM ATP and 1 μl extra T4 PNK were added to the reaction and the mixture was kept for 30 min at 37 ℃. The RNA was purified by ethanol precipitation. The libraries were constructed after depletion of rRNA, and sequenced on Illumina Hiseq2500 with single end 51-bp read length.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribozero RNA
+sgMETTL16-3 ribo-seq
+    </Description>
+    <Data-Processing>
+Library strategy: ribosome profiling
+sequenced reads were trimmed for adaptor sequence, and masked for low-complexity or low-quality sequence
+reads were aligned to the GRCh38 genome assembly using STAR
+the TPM were calculated using RSEM 1.2.31 with default parameters
+Genome_build: GRCh38
+Supplementary_files_format_and_content: table delimited text file containing the expression of genes (tpm)
+    </Data-Processing>
+    <Platform-Ref ref="GPL16791" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15896330" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9001622" />
+  </Sample>
+
+  <Series iid="GSE156796">
+    <Status database="GEO">
+      <Submission-Date>2020-08-24</Submission-Date>
+      <Release-Date>2021-10-28</Release-Date>
+      <Last-Update-Date>2021-10-28</Last-Update-Date>
+    </Status>
+    <Title>Determine the effects of METTL16 on global translation efficiency via ribosome profiling (Ribo-seq)</Title>
+    <Accession database="GEO">GSE156796</Accession>
+    <Summary>
+METTL16 is a member of methyltransferase like (METTL) family. Unlike well-studied METTL3 and METTL14, we found a much higher percentage of METTL16 is localized in the cytosol. The subcellular distribution holds the ability to potentiate translation efficiency. Via Far-western blotting and Co-Immunoprecipitation (Co-IP) assays, we have identified the direct interactions between METTL16 and eukaryotic initiation factor 3 (eIF3) a and b. Via cross-linking immunoprecipitation and qPCR (CLIP-qPCR), we have discovered the direct associations between METTL16 and rRNAs. The METTL16-eIF3a/b and METTL16-rRNAs interactions induce the binding between eIF3 and 18S rRNA, promote the formation of 43S preinitiation complex, and eventually expedite translation initiation, the rate-limiting step of translation. To determine the exact effects of METTL16 on translation efficiency, we performed ribosome profiling (Ribo-seq) with HEK293T upon CRISPR-Cas9-induced METTL16 knockout. To guarantee the repeatability and avoid any potential off-target effects, we included 3 distint sgRNAs against METTL16.
+    </Summary>
+    <Overall-Design>
+The Cas9 single clone of HEK293T cells was infected with lentivirus sgRNAs against METTL16 and the cells were collected at 70-80% confluency after selection with blasticidin and puromycin for at least 1 week. The samples were subjected to ribosome profiling and both the input RNA and footprint RNAs were used for sequencing. Three sgRNAs against METTL16 groups and one sgNS group were included.
+    </Overall-Design>
+    <Type>Other</Type>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contributor-Ref ref="contrib4" position="2" />
+    <Contributor-Ref ref="contrib1" position="3" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM4744693" />
+    <Sample-Ref ref="GSM4744694" />
+    <Sample-Ref ref="GSM4744695" />
+    <Sample-Ref ref="GSM4744696" />
+    <Sample-Ref ref="GSM4744697" />
+    <Sample-Ref ref="GSM4744698" />
+    <Sample-Ref ref="GSM4744699" />
+    <Sample-Ref ref="GSM4744700" />
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE156nnn/GSE156796/suppl/GSE156796_ribo.tpm.txt.gz
+    </Supplementary-Data>
+    <Relation type="SubSeries of" target="GSE156798" />
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA659038" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRP278667" />
+  </Series>
+
+</MINiML>

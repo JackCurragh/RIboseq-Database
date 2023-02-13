@@ -1,0 +1,15 @@
+--2023-02-13 14:12:38--  ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE185nnn/GSE185458/miniml/GSE185458_family.xml.tgz
+           => ‘GSE185458_family.xml.tgz’
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 130.14.250.10, 130.14.250.7, 2607:f220:41e:250::10, ...
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.10|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /geo/series/GSE185nnn/GSE185458/miniml ... done.
+==> SIZE GSE185458_family.xml.tgz ... 4965
+==> PASV ... done.    ==> RETR GSE185458_family.xml.tgz ... done.
+Length: 4965 (4.8K) (unauthoritative)
+
+     0K ....                                                  100% 1.76M=0.003s
+
+2023-02-13 14:12:39 (1.76 MB/s) - ‘GSE185458_family.xml.tgz’ saved [4965]
+

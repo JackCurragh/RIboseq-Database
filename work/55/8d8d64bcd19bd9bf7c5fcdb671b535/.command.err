@@ -1,0 +1,15 @@
+--2023-02-13 14:12:42--  ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE136nnn/GSE136940/miniml/GSE136940_family.xml.tgz
+           => ‘GSE136940_family.xml.tgz’
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 130.14.250.10, 130.14.250.7, 2607:f220:41e:250::10, ...
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.10|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /geo/series/GSE136nnn/GSE136940/miniml ... done.
+==> SIZE GSE136940_family.xml.tgz ... 5214
+==> PASV ... done.    ==> RETR GSE136940_family.xml.tgz ... done.
+Length: 5214 (5.1K) (unauthoritative)
+
+     0K .....                                                 100% 7.94M=0.001s
+
+2023-02-13 14:12:44 (7.94 MB/s) - ‘GSE136940_family.xml.tgz’ saved [5214]
+

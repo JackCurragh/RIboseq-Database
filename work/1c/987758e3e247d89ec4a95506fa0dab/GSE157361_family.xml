@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Matthew</First><Middle>Lee</Middle><Last>Kraushar</Last></Person>
+    <Email>matthew.kraushar@molgen.mpg.de</Email>
+    <Department>Department of Computational Molecular Biology</Department>
+    <Organization>Max Planck Institute for Molecular Genetics</Organization>
+    <Address>
+      <Line>Ihnestrasse 63-73</Line>
+      <City>Berlin</City>
+      <State>Berlin</State>
+      <Zip-Code>14195</Zip-Code>
+      <Country>Germany</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Matthew</First><Middle>L</Middle><Last>Kraushar</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL21626">
+    <Status database="GEO">
+      <Submission-Date>2016-03-22</Submission-Date>
+      <Release-Date>2016-03-22</Release-Date>
+      <Last-Update-Date>2019-01-15</Last-Update-Date>
+    </Status>
+    <Title>NextSeq 550 (Mus musculus)</Title>
+    <Accession database="GEO">GPL21626</Accession>
+    <Technology>high-throughput sequencing</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="10090">Mus musculus</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM4763681">
+    <Status database="GEO">
+      <Submission-Date>2020-09-02</Submission-Date>
+      <Release-Date>2021-03-23</Release-Date>
+      <Last-Update-Date>2021-03-23</Last-Update-Date>
+    </Status>
+    <Title>Ebp1_IP_Rep1</Title>
+    <Accession database="GEO">GSM4763681</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Neuro2a cell line in culture</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="cell line">
+Neuro2a
+      </Characteristics>
+      <Characteristics tag="treatment">
+MNase digestion
+      </Characteristics>
+      <Characteristics tag="rip antibody">
+anti-Ebp1CT (Abcam, ab35424)-immuno-precipitation
+      </Characteristics>
+      <Growth-Protocol>
+For each biological replicate (n=2), three 15 cm plates of Neuro2a cells were grown in standard DMEM (Gibco, 31966047) with 10 % FBS (Gibco, 10270106) and 1 % penicillin-streptomycin (Gibco, 15140122) to a confluence of 80 % in humidified 37 °C, 5 % CO2.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cells were washed and detached in 10 mL ice-cold PBS supplemented with 12 mM MgCl2 and 100 µg/mL cycloheximide (Sigma-Aldrich, C7698) and centrifuged for 4 min at 300 xg, 4 °C. The cell pellet was lysed in 0.5 mL lysis buffer (20 mM Tris-HCl, pH 8.0, 140 mM KCl, 12 mM MgCl2, 5mM CaCl2, 0.5 % NP-40, 100 µg/mL cycloheximide, 25 U/mL DNase-I (Roche, 4716728001), 1x Protease Inhibitor cOmplete EDTA-free (Roche, 05056489001), 1 mM PMSF (Roth, 6367)). The lysate was passed five times through a 23 G needle and cleared by centrifugation (2 min at 13000 xg, 4 °C). After clearing the lysate by centrifugation (2 min at 13000 xg, 4 °C), the supernatant was divided for total (200 µL) and IP (400 µL) translatome samples. Total samples were digested with MNase (300 U / 1 A260 nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10 mM EGTA and ribosomes were purified by sucrose cushion centrifugation (25 % sucrose, 20 mM Tris-HCl pH 8.0, 140 mM KCl, 12 mM MgCl2, 100 µg/mL cycloheximide, 1 mM PMSF) for 90 min, 75000 rpm, at 4 °C (Beckmann AT2 S120 rotor). Pelleted ribosomes were resuspended in lysis buffer lacking CaCl2 and subjected to phenol-chloroform extraction of RNA. IP samples were mixed with 100 µL Dynabeads (Life Technologies, 10008D) conjugated with 10 µg anti-Ebp1CT (Abcam, ab35424) and digested using MNase (300U / 1 A260nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10mM EGTA and the beads were washed three times in 400 µL wash buffer (50 mM Tris-HCl pH 7.5, 150 mM NaCl, 12mM MgCl2, 1 mM PMSF, 100 µg/mL cycloheximide, 0.1 % NP-40) followed by phenol-chloroform extraction of RNA.
+Gel purification and 3'-dephosphorylation of ribosome-protected footprints from total and IP samples was performed as previously described (Galmozzi et al., 2019). Footprints were then 5'-phosphorylated using T4 PNK (NEB, M0201S) and ATP for 1 hr at 37 °C. Deep sequencing libraries were prepared from these RNA fragments using the NEXTflex Small RNA-seq Kit v3 (Bio Scientific, NOVA-5132-06).
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribosome-protected mRNA fragment
+    </Description>
+    <Data-Processing>
+Raw reads were processed as described previously (Galmozzi et al., 2019) using standard analysis tools (Cutadapt, Bowtie2, TopHat2) and python scripts adapted to Mus musculus. In short, trimmed reads between 23 and 37 nucleotides in length were aligned to the mouse transcriptome (NCBI RefSeq mm10) by TopHat2 (Kim et al., 2013), allowing up to two mismatches.
+Ribosomal A sites were statistically estimated by (virtually) cutting 11 nucleotides from both 5' and 3' read ends ('center weighting').
+RPKM values were calculated using the Plastid CS program (Dunn and Weissman, 2016). Further analyses were performed using customized python scripts. SeRP analyses are based on two independent biological replicates that were highly reproducible. Genes were only considered for analysis if they fulfill the following requirements: i) at least 64 reads in all total and Ebp1-bound translatome datasets; ii) at least 2 RPKM in all total and Ebp1-bound translatome datasets.
+For metagene enrichment analysis of Ebp1 binding, we aligned open reading frames (ORFs) as indicated and divided the mean RPM value of the IP translatome by the mean RPM value of the total translatome at each codon along the aligned ORFs. Values at each codon were smoothed using a 20 residue rolling average. Analyses were performed using either all genes that were detected in the dataset or by splitting genes into pre-defined subsets based on their cellular localization or protein features. Information about cellular localization and protein features were received from UniProt (www.uniprot.org).
+Genome_build: mouse transcriptome (NCBI RefSeq mm10)
+Supplementary_files_format_and_content: counts_table.csv
+    </Data-Processing>
+    <Platform-Ref ref="GPL21626" />
+    <Library-Strategy>RIP-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15968970" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9059874" />
+  </Sample>
+
+  <Sample iid="GSM4763682">
+    <Status database="GEO">
+      <Submission-Date>2020-09-02</Submission-Date>
+      <Release-Date>2021-03-23</Release-Date>
+      <Last-Update-Date>2021-03-23</Last-Update-Date>
+    </Status>
+    <Title>Ebp1_IP_Rep2</Title>
+    <Accession database="GEO">GSM4763682</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Neuro2a cell line in culture</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="cell line">
+Neuro2a
+      </Characteristics>
+      <Characteristics tag="treatment">
+MNase digestion
+      </Characteristics>
+      <Characteristics tag="rip antibody">
+anti-Ebp1CT (Abcam, ab35424)-immuno-precipitation
+      </Characteristics>
+      <Growth-Protocol>
+For each biological replicate (n=2), three 15 cm plates of Neuro2a cells were grown in standard DMEM (Gibco, 31966047) with 10 % FBS (Gibco, 10270106) and 1 % penicillin-streptomycin (Gibco, 15140122) to a confluence of 80 % in humidified 37 °C, 5 % CO2.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cells were washed and detached in 10 mL ice-cold PBS supplemented with 12 mM MgCl2 and 100 µg/mL cycloheximide (Sigma-Aldrich, C7698) and centrifuged for 4 min at 300 xg, 4 °C. The cell pellet was lysed in 0.5 mL lysis buffer (20 mM Tris-HCl, pH 8.0, 140 mM KCl, 12 mM MgCl2, 5mM CaCl2, 0.5 % NP-40, 100 µg/mL cycloheximide, 25 U/mL DNase-I (Roche, 4716728001), 1x Protease Inhibitor cOmplete EDTA-free (Roche, 05056489001), 1 mM PMSF (Roth, 6367)). The lysate was passed five times through a 23 G needle and cleared by centrifugation (2 min at 13000 xg, 4 °C). After clearing the lysate by centrifugation (2 min at 13000 xg, 4 °C), the supernatant was divided for total (200 µL) and IP (400 µL) translatome samples. Total samples were digested with MNase (300 U / 1 A260 nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10 mM EGTA and ribosomes were purified by sucrose cushion centrifugation (25 % sucrose, 20 mM Tris-HCl pH 8.0, 140 mM KCl, 12 mM MgCl2, 100 µg/mL cycloheximide, 1 mM PMSF) for 90 min, 75000 rpm, at 4 °C (Beckmann AT2 S120 rotor). Pelleted ribosomes were resuspended in lysis buffer lacking CaCl2 and subjected to phenol-chloroform extraction of RNA. IP samples were mixed with 100 µL Dynabeads (Life Technologies, 10008D) conjugated with 10 µg anti-Ebp1CT (Abcam, ab35424) and digested using MNase (300U / 1 A260nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10mM EGTA and the beads were washed three times in 400 µL wash buffer (50 mM Tris-HCl pH 7.5, 150 mM NaCl, 12mM MgCl2, 1 mM PMSF, 100 µg/mL cycloheximide, 0.1 % NP-40) followed by phenol-chloroform extraction of RNA.
+Gel purification and 3'-dephosphorylation of ribosome-protected footprints from total and IP samples was performed as previously described (Galmozzi et al., 2019). Footprints were then 5'-phosphorylated using T4 PNK (NEB, M0201S) and ATP for 1 hr at 37 °C. Deep sequencing libraries were prepared from these RNA fragments using the NEXTflex Small RNA-seq Kit v3 (Bio Scientific, NOVA-5132-06).
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribosome-protected mRNA fragment
+    </Description>
+    <Data-Processing>
+Raw reads were processed as described previously (Galmozzi et al., 2019) using standard analysis tools (Cutadapt, Bowtie2, TopHat2) and python scripts adapted to Mus musculus. In short, trimmed reads between 23 and 37 nucleotides in length were aligned to the mouse transcriptome (NCBI RefSeq mm10) by TopHat2 (Kim et al., 2013), allowing up to two mismatches.
+Ribosomal A sites were statistically estimated by (virtually) cutting 11 nucleotides from both 5' and 3' read ends ('center weighting').
+RPKM values were calculated using the Plastid CS program (Dunn and Weissman, 2016). Further analyses were performed using customized python scripts. SeRP analyses are based on two independent biological replicates that were highly reproducible. Genes were only considered for analysis if they fulfill the following requirements: i) at least 64 reads in all total and Ebp1-bound translatome datasets; ii) at least 2 RPKM in all total and Ebp1-bound translatome datasets.
+For metagene enrichment analysis of Ebp1 binding, we aligned open reading frames (ORFs) as indicated and divided the mean RPM value of the IP translatome by the mean RPM value of the total translatome at each codon along the aligned ORFs. Values at each codon were smoothed using a 20 residue rolling average. Analyses were performed using either all genes that were detected in the dataset or by splitting genes into pre-defined subsets based on their cellular localization or protein features. Information about cellular localization and protein features were received from UniProt (www.uniprot.org).
+Genome_build: mouse transcriptome (NCBI RefSeq mm10)
+Supplementary_files_format_and_content: counts_table.csv
+    </Data-Processing>
+    <Platform-Ref ref="GPL21626" />
+    <Library-Strategy>RIP-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15968969" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9059875" />
+  </Sample>
+
+  <Sample iid="GSM4763683">
+    <Status database="GEO">
+      <Submission-Date>2020-09-02</Submission-Date>
+      <Release-Date>2021-03-23</Release-Date>
+      <Last-Update-Date>2021-03-23</Last-Update-Date>
+    </Status>
+    <Title>Ebp1_Total_Rep1</Title>
+    <Accession database="GEO">GSM4763683</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Neuro2a cell line in culture</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="cell line">
+Neuro2a
+      </Characteristics>
+      <Characteristics tag="treatment">
+MNase digestion
+      </Characteristics>
+      <Characteristics tag="rip antibody">
+none
+      </Characteristics>
+      <Growth-Protocol>
+For each biological replicate (n=2), three 15 cm plates of Neuro2a cells were grown in standard DMEM (Gibco, 31966047) with 10 % FBS (Gibco, 10270106) and 1 % penicillin-streptomycin (Gibco, 15140122) to a confluence of 80 % in humidified 37 °C, 5 % CO2.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cells were washed and detached in 10 mL ice-cold PBS supplemented with 12 mM MgCl2 and 100 µg/mL cycloheximide (Sigma-Aldrich, C7698) and centrifuged for 4 min at 300 xg, 4 °C. The cell pellet was lysed in 0.5 mL lysis buffer (20 mM Tris-HCl, pH 8.0, 140 mM KCl, 12 mM MgCl2, 5mM CaCl2, 0.5 % NP-40, 100 µg/mL cycloheximide, 25 U/mL DNase-I (Roche, 4716728001), 1x Protease Inhibitor cOmplete EDTA-free (Roche, 05056489001), 1 mM PMSF (Roth, 6367)). The lysate was passed five times through a 23 G needle and cleared by centrifugation (2 min at 13000 xg, 4 °C). After clearing the lysate by centrifugation (2 min at 13000 xg, 4 °C), the supernatant was divided for total (200 µL) and IP (400 µL) translatome samples. Total samples were digested with MNase (300 U / 1 A260 nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10 mM EGTA and ribosomes were purified by sucrose cushion centrifugation (25 % sucrose, 20 mM Tris-HCl pH 8.0, 140 mM KCl, 12 mM MgCl2, 100 µg/mL cycloheximide, 1 mM PMSF) for 90 min, 75000 rpm, at 4 °C (Beckmann AT2 S120 rotor). Pelleted ribosomes were resuspended in lysis buffer lacking CaCl2 and subjected to phenol-chloroform extraction of RNA. IP samples were mixed with 100 µL Dynabeads (Life Technologies, 10008D) conjugated with 10 µg anti-Ebp1CT (Abcam, ab35424) and digested using MNase (300U / 1 A260nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10mM EGTA and the beads were washed three times in 400 µL wash buffer (50 mM Tris-HCl pH 7.5, 150 mM NaCl, 12mM MgCl2, 1 mM PMSF, 100 µg/mL cycloheximide, 0.1 % NP-40) followed by phenol-chloroform extraction of RNA.
+Gel purification and 3'-dephosphorylation of ribosome-protected footprints from total and IP samples was performed as previously described (Galmozzi et al., 2019). Footprints were then 5'-phosphorylated using T4 PNK (NEB, M0201S) and ATP for 1 hr at 37 °C. Deep sequencing libraries were prepared from these RNA fragments using the NEXTflex Small RNA-seq Kit v3 (Bio Scientific, NOVA-5132-06).
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribosome-protected mRNA fragment
+    </Description>
+    <Data-Processing>
+Raw reads were processed as described previously (Galmozzi et al., 2019) using standard analysis tools (Cutadapt, Bowtie2, TopHat2) and python scripts adapted to Mus musculus. In short, trimmed reads between 23 and 37 nucleotides in length were aligned to the mouse transcriptome (NCBI RefSeq mm10) by TopHat2 (Kim et al., 2013), allowing up to two mismatches.
+Ribosomal A sites were statistically estimated by (virtually) cutting 11 nucleotides from both 5' and 3' read ends ('center weighting').
+RPKM values were calculated using the Plastid CS program (Dunn and Weissman, 2016). Further analyses were performed using customized python scripts. SeRP analyses are based on two independent biological replicates that were highly reproducible. Genes were only considered for analysis if they fulfill the following requirements: i) at least 64 reads in all total and Ebp1-bound translatome datasets; ii) at least 2 RPKM in all total and Ebp1-bound translatome datasets.
+For metagene enrichment analysis of Ebp1 binding, we aligned open reading frames (ORFs) as indicated and divided the mean RPM value of the IP translatome by the mean RPM value of the total translatome at each codon along the aligned ORFs. Values at each codon were smoothed using a 20 residue rolling average. Analyses were performed using either all genes that were detected in the dataset or by splitting genes into pre-defined subsets based on their cellular localization or protein features. Information about cellular localization and protein features were received from UniProt (www.uniprot.org).
+Genome_build: mouse transcriptome (NCBI RefSeq mm10)
+Supplementary_files_format_and_content: counts_table.csv
+    </Data-Processing>
+    <Platform-Ref ref="GPL21626" />
+    <Library-Strategy>RIP-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15968974" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9059876" />
+  </Sample>
+
+  <Sample iid="GSM4763684">
+    <Status database="GEO">
+      <Submission-Date>2020-09-02</Submission-Date>
+      <Release-Date>2021-03-23</Release-Date>
+      <Last-Update-Date>2021-03-23</Last-Update-Date>
+    </Status>
+    <Title>Ebp1_Total_Rep2</Title>
+    <Accession database="GEO">GSM4763684</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Neuro2a cell line in culture</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="cell line">
+Neuro2a
+      </Characteristics>
+      <Characteristics tag="treatment">
+MNase digestion
+      </Characteristics>
+      <Characteristics tag="rip antibody">
+none
+      </Characteristics>
+      <Growth-Protocol>
+For each biological replicate (n=2), three 15 cm plates of Neuro2a cells were grown in standard DMEM (Gibco, 31966047) with 10 % FBS (Gibco, 10270106) and 1 % penicillin-streptomycin (Gibco, 15140122) to a confluence of 80 % in humidified 37 °C, 5 % CO2.
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cells were washed and detached in 10 mL ice-cold PBS supplemented with 12 mM MgCl2 and 100 µg/mL cycloheximide (Sigma-Aldrich, C7698) and centrifuged for 4 min at 300 xg, 4 °C. The cell pellet was lysed in 0.5 mL lysis buffer (20 mM Tris-HCl, pH 8.0, 140 mM KCl, 12 mM MgCl2, 5mM CaCl2, 0.5 % NP-40, 100 µg/mL cycloheximide, 25 U/mL DNase-I (Roche, 4716728001), 1x Protease Inhibitor cOmplete EDTA-free (Roche, 05056489001), 1 mM PMSF (Roth, 6367)). The lysate was passed five times through a 23 G needle and cleared by centrifugation (2 min at 13000 xg, 4 °C). After clearing the lysate by centrifugation (2 min at 13000 xg, 4 °C), the supernatant was divided for total (200 µL) and IP (400 µL) translatome samples. Total samples were digested with MNase (300 U / 1 A260 nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10 mM EGTA and ribosomes were purified by sucrose cushion centrifugation (25 % sucrose, 20 mM Tris-HCl pH 8.0, 140 mM KCl, 12 mM MgCl2, 100 µg/mL cycloheximide, 1 mM PMSF) for 90 min, 75000 rpm, at 4 °C (Beckmann AT2 S120 rotor). Pelleted ribosomes were resuspended in lysis buffer lacking CaCl2 and subjected to phenol-chloroform extraction of RNA. IP samples were mixed with 100 µL Dynabeads (Life Technologies, 10008D) conjugated with 10 µg anti-Ebp1CT (Abcam, ab35424) and digested using MNase (300U / 1 A260nm) for 30 min at 4 °C, under rotation. The reaction was terminated by addition of 10mM EGTA and the beads were washed three times in 400 µL wash buffer (50 mM Tris-HCl pH 7.5, 150 mM NaCl, 12mM MgCl2, 1 mM PMSF, 100 µg/mL cycloheximide, 0.1 % NP-40) followed by phenol-chloroform extraction of RNA.
+Gel purification and 3'-dephosphorylation of ribosome-protected footprints from total and IP samples was performed as previously described (Galmozzi et al., 2019). Footprints were then 5'-phosphorylated using T4 PNK (NEB, M0201S) and ATP for 1 hr at 37 °C. Deep sequencing libraries were prepared from these RNA fragments using the NEXTflex Small RNA-seq Kit v3 (Bio Scientific, NOVA-5132-06).
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+ribosome-protected mRNA fragment
+    </Description>
+    <Data-Processing>
+Raw reads were processed as described previously (Galmozzi et al., 2019) using standard analysis tools (Cutadapt, Bowtie2, TopHat2) and python scripts adapted to Mus musculus. In short, trimmed reads between 23 and 37 nucleotides in length were aligned to the mouse transcriptome (NCBI RefSeq mm10) by TopHat2 (Kim et al., 2013), allowing up to two mismatches.
+Ribosomal A sites were statistically estimated by (virtually) cutting 11 nucleotides from both 5' and 3' read ends ('center weighting').
+RPKM values were calculated using the Plastid CS program (Dunn and Weissman, 2016). Further analyses were performed using customized python scripts. SeRP analyses are based on two independent biological replicates that were highly reproducible. Genes were only considered for analysis if they fulfill the following requirements: i) at least 64 reads in all total and Ebp1-bound translatome datasets; ii) at least 2 RPKM in all total and Ebp1-bound translatome datasets.
+For metagene enrichment analysis of Ebp1 binding, we aligned open reading frames (ORFs) as indicated and divided the mean RPM value of the IP translatome by the mean RPM value of the total translatome at each codon along the aligned ORFs. Values at each codon were smoothed using a 20 residue rolling average. Analyses were performed using either all genes that were detected in the dataset or by splitting genes into pre-defined subsets based on their cellular localization or protein features. Information about cellular localization and protein features were received from UniProt (www.uniprot.org).
+Genome_build: mouse transcriptome (NCBI RefSeq mm10)
+Supplementary_files_format_and_content: counts_table.csv
+    </Data-Processing>
+    <Platform-Ref ref="GPL21626" />
+    <Library-Strategy>RIP-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN15968973" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX9059877" />
+  </Sample>
+
+  <Series iid="GSE157361">
+    <Status database="GEO">
+      <Submission-Date>2020-09-02</Submission-Date>
+      <Release-Date>2021-03-23</Release-Date>
+      <Last-Update-Date>2023-01-06</Last-Update-Date>
+    </Status>
+    <Title>Ebp1-selective ribosome profiling analysis of Neuro2a cells with Ebp1-immuno-precipitation</Title>
+    <Accession database="GEO">GSE157361</Accession>
+    <Pubmed-ID>33357414</Pubmed-ID>
+    <Pubmed-ID>36482253</Pubmed-ID>
+    <Summary>
+We perform Selective Ribosome Profiling (SeRP) analysis of mouse Neuro2a neuronal cultures with Ebp1-immuno-precipitation in biological duplicate to assess the translation-specific function of Ebp1
+    </Summary>
+    <Overall-Design>
+Each biological replicate analyzed for ribosome-protected mRNA fragments after RNAse digestion in both Ebp-ribosome immuno-precipitation conditions, and the total input ribosome pool, followed by by high-throughput sequencing.
+    </Overall-Design>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM4763681" />
+    <Sample-Ref ref="GSM4763682" />
+    <Sample-Ref ref="GSM4763683" />
+    <Sample-Ref ref="GSM4763684" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE157nnn/GSE157361/suppl/GSE157361_counts_table.csv.gz
+    </Supplementary-Data>
+    <Relation type="SubSeries of" target="GSE157425" />
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA661060" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRP279771" />
+  </Series>
+
+</MINiML>

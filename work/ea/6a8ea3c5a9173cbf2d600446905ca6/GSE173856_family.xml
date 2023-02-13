@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Olivier</First><Last>Namy</Last></Person>
+    <Email>olivier.namy@i2bc.paris-saclay.fr</Email>
+    <Laboratory>Genomic, structure and Translation</Laboratory>
+    <Department>I2BC</Department>
+    <Organization>CNRS, Université Paris-Sud</Organization>
+    <Address>
+      <Line>Rue Gregor Mendel, bat 400</Line>
+      <City>Orsay</City>
+      <Zip-Code>91400</Zip-Code>
+      <Country>France</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Pauline</First><Last>François</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib4">
+    <Person><First>Hugo</First><Last>Arbes</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib5">
+    <Person><First>Stéphane</First><Last>Demais</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib6">
+    <Person><First>Agnès</First><Last>Baudin-Baillieu</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL13821">
+    <Status database="GEO">
+      <Submission-Date>2011-07-05</Submission-Date>
+      <Release-Date>2011-07-05</Release-Date>
+      <Last-Update-Date>2019-03-13</Last-Update-Date>
+    </Status>
+    <Title>Illumina HiSeq 2000 (Saccharomyces cerevisiae)</Title>
+    <Accession database="GEO">GPL13821</Accession>
+    <Technology>high-throughput sequencing</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM5281938">
+    <Status database="GEO">
+      <Submission-Date>2021-05-04</Submission-Date>
+      <Release-Date>2021-08-04</Release-Date>
+      <Last-Update-Date>2021-08-04</Last-Update-Date>
+    </Status>
+    <Title>WT rep 1</Title>
+    <Accession database="GEO">GSM5281938</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+74D-694
+      </Characteristics>
+      <Characteristics tag="treatment">
+CHX
+      </Characteristics>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Treatment-Protocol>
+Cycloheximide is added to the medium at 50 µg/mL
+      </Treatment-Protocol>
+      <Growth-Protocol>
+All strains were grown to mid-exponential growth phase in a synthetic medium,
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+the extraction is performed as previously published Baudin-Baillieu A et al. Methods Mol. Biol. 2016, 1361:105-24. briefly: Pellet cells by centrifugation at 4 °C, 4000×g for 10 min. resuspend pellet in 10 ml cold Lysis Buffer containing 50 μg/ml cycloheximide. Pulverize Cells by adding glass beads and vortexing the mix- ture for 10 min at 4 °C. Remove cells debris by centrifugation at 4 °C, 5000×g for 5 min and transfer the supernatant to chilled 1.5 ml microfuge tubes on ice. The supernatant is clarified by centrifugation at 4 °C, 15,000×g for 15 min. Recover supernatant.
+Libraries were prepared according to Illumina's instructions accompanying the TruSeq Small RNA preparation kits
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+polysome extraction
+    </Description>
+    <Data-Processing>
+RiboDoc package
+Sequenced reads were trimmed for adaptor sequence, and size filtered to keep only reads between 25-35nts
+Reads are mapped using bowtie2 on Saccer3
+Differential expression is obtained using DESeq2 package
+Genome_build: Saccer3
+Supplementary_files_format_and_content: Matrix table with raw gene counts for every gene and every sample
+    </Data-Processing>
+    <Platform-Ref ref="GPL13821" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN19014403" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX10773189" />
+  </Sample>
+
+  <Sample iid="GSM5281939">
+    <Status database="GEO">
+      <Submission-Date>2021-05-04</Submission-Date>
+      <Release-Date>2021-08-04</Release-Date>
+      <Last-Update-Date>2021-08-04</Last-Update-Date>
+    </Status>
+    <Title>WT rep 2</Title>
+    <Accession database="GEO">GSM5281939</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+74D-694
+      </Characteristics>
+      <Characteristics tag="treatment">
+CHX
+      </Characteristics>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Treatment-Protocol>
+Cycloheximide is added to the medium at 50 µg/mL
+      </Treatment-Protocol>
+      <Growth-Protocol>
+All strains were grown to mid-exponential growth phase in a synthetic medium,
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+the extraction is performed as previously published Baudin-Baillieu A et al. Methods Mol. Biol. 2016, 1361:105-24. briefly: Pellet cells by centrifugation at 4 °C, 4000×g for 10 min. resuspend pellet in 10 ml cold Lysis Buffer containing 50 μg/ml cycloheximide. Pulverize Cells by adding glass beads and vortexing the mix- ture for 10 min at 4 °C. Remove cells debris by centrifugation at 4 °C, 5000×g for 5 min and transfer the supernatant to chilled 1.5 ml microfuge tubes on ice. The supernatant is clarified by centrifugation at 4 °C, 15,000×g for 15 min. Recover supernatant.
+Libraries were prepared according to Illumina's instructions accompanying the TruSeq Small RNA preparation kits
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+polysome extraction
+    </Description>
+    <Data-Processing>
+RiboDoc package
+Sequenced reads were trimmed for adaptor sequence, and size filtered to keep only reads between 25-35nts
+Reads are mapped using bowtie2 on Saccer3
+Differential expression is obtained using DESeq2 package
+Genome_build: Saccer3
+Supplementary_files_format_and_content: Matrix table with raw gene counts for every gene and every sample
+    </Data-Processing>
+    <Platform-Ref ref="GPL13821" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN19014400" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX10773190" />
+  </Sample>
+
+  <Sample iid="GSM5281940">
+    <Status database="GEO">
+      <Submission-Date>2021-05-04</Submission-Date>
+      <Release-Date>2021-08-04</Release-Date>
+      <Last-Update-Date>2021-08-04</Last-Update-Date>
+    </Status>
+    <Title>Mutant rep 1</Title>
+    <Accession database="GEO">GSM5281940</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+74D-694
+      </Characteristics>
+      <Characteristics tag="treatment">
+CHX
+      </Characteristics>
+      <Characteristics tag="genotype/variation">
+mutant
+      </Characteristics>
+      <Treatment-Protocol>
+Cycloheximide is added to the medium at 50 µg/mL
+      </Treatment-Protocol>
+      <Growth-Protocol>
+All strains were grown to mid-exponential growth phase in a synthetic medium,
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+the extraction is performed as previously published Baudin-Baillieu A et al. Methods Mol. Biol. 2016, 1361:105-24. briefly: Pellet cells by centrifugation at 4 °C, 4000×g for 10 min. resuspend pellet in 10 ml cold Lysis Buffer containing 50 μg/ml cycloheximide. Pulverize Cells by adding glass beads and vortexing the mix- ture for 10 min at 4 °C. Remove cells debris by centrifugation at 4 °C, 5000×g for 5 min and transfer the supernatant to chilled 1.5 ml microfuge tubes on ice. The supernatant is clarified by centrifugation at 4 °C, 15,000×g for 15 min. Recover supernatant.
+Libraries were prepared according to Illumina's instructions accompanying the TruSeq Small RNA preparation kits
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+polysome extraction
+    </Description>
+    <Data-Processing>
+RiboDoc package
+Sequenced reads were trimmed for adaptor sequence, and size filtered to keep only reads between 25-35nts
+Reads are mapped using bowtie2 on Saccer3
+Differential expression is obtained using DESeq2 package
+Genome_build: Saccer3
+Supplementary_files_format_and_content: Matrix table with raw gene counts for every gene and every sample
+    </Data-Processing>
+    <Platform-Ref ref="GPL13821" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN19014402" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX10773191" />
+  </Sample>
+
+  <Sample iid="GSM5281941">
+    <Status database="GEO">
+      <Submission-Date>2021-05-04</Submission-Date>
+      <Release-Date>2021-08-04</Release-Date>
+      <Last-Update-Date>2021-08-04</Last-Update-Date>
+    </Status>
+    <Title>Mutant rep 2</Title>
+    <Accession database="GEO">GSM5281941</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+74D-694
+      </Characteristics>
+      <Characteristics tag="treatment">
+CHX
+      </Characteristics>
+      <Characteristics tag="genotype/variation">
+mutant
+      </Characteristics>
+      <Treatment-Protocol>
+Cycloheximide is added to the medium at 50 µg/mL
+      </Treatment-Protocol>
+      <Growth-Protocol>
+All strains were grown to mid-exponential growth phase in a synthetic medium,
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+the extraction is performed as previously published Baudin-Baillieu A et al. Methods Mol. Biol. 2016, 1361:105-24. briefly: Pellet cells by centrifugation at 4 °C, 4000×g for 10 min. resuspend pellet in 10 ml cold Lysis Buffer containing 50 μg/ml cycloheximide. Pulverize Cells by adding glass beads and vortexing the mix- ture for 10 min at 4 °C. Remove cells debris by centrifugation at 4 °C, 5000×g for 5 min and transfer the supernatant to chilled 1.5 ml microfuge tubes on ice. The supernatant is clarified by centrifugation at 4 °C, 15,000×g for 15 min. Recover supernatant.
+Libraries were prepared according to Illumina's instructions accompanying the TruSeq Small RNA preparation kits
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+polysome extraction
+    </Description>
+    <Data-Processing>
+RiboDoc package
+Sequenced reads were trimmed for adaptor sequence, and size filtered to keep only reads between 25-35nts
+Reads are mapped using bowtie2 on Saccer3
+Differential expression is obtained using DESeq2 package
+Genome_build: Saccer3
+Supplementary_files_format_and_content: Matrix table with raw gene counts for every gene and every sample
+    </Data-Processing>
+    <Platform-Ref ref="GPL13821" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina HiSeq 2000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN19014401" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX10773192" />
+  </Sample>
+
+  <Series iid="GSE173856">
+    <Status database="GEO">
+      <Submission-Date>2021-05-04</Submission-Date>
+      <Release-Date>2021-08-04</Release-Date>
+      <Last-Update-Date>2021-08-05</Last-Update-Date>
+    </Status>
+    <Title>RiboDoc: a Docker-based package for ribosome profiling analysis</Title>
+    <Accession database="GEO">GSE173856</Accession>
+    <Pubmed-ID>34093996</Pubmed-ID>
+    <Web-Link>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8141510/</Web-Link>
+    <Summary>
+ Ribosome profiling (RiboSeq) has emerged as a powerful technique for studying the genome-wide regulation of translation in various cells. Several steps in the biological protocol have been improved, but the bioinformatics part of RiboSeq suffers from a lack of standardization, preventing the straightforward and complete reproduction of published results. Too many published studies provide insufficient detail about the bioinformatics pipeline used. The broad range of questions that can be asked with RiboSeq makes it difficult to use a single bioinformatics tool. Indeed, many scripts have been published for addressing diverse questions. Here, we propose a unique tool (for use with multiple operating systems, OS) to standardize the general steps that must be performed systematically in RiboSeq analysis, together with the statistical analysis and quality control of the sample. The data generated can then be exploited with more specific tools. We hope that this tool will help to standardize bioinformatics analyses pipelines in the field of translation.
+    </Summary>
+    <Overall-Design>
+comparison between a WT yeast strain and a strain in which the frameshiffted  OAZ1 gene has been replaced by an in-frame version of OAZ1
+    </Overall-Design>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contributor-Ref ref="contrib4" position="2" />
+    <Contributor-Ref ref="contrib5" position="3" />
+    <Contributor-Ref ref="contrib6" position="4" />
+    <Contributor-Ref ref="contrib1" position="5" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM5281938" />
+    <Sample-Ref ref="GSM5281939" />
+    <Sample-Ref ref="GSM5281940" />
+    <Sample-Ref ref="GSM5281941" />
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE173nnn/GSE173856/suppl/GSE173856_count_matrix.txt.gz
+    </Supplementary-Data>
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA727314" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRP318454" />
+  </Series>
+
+</MINiML>

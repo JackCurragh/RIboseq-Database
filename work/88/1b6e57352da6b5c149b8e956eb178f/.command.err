@@ -1,0 +1,15 @@
+--2023-02-13 14:12:39--  ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE156nnn/GSE156796/miniml/GSE156796_family.xml.tgz
+           => ‘GSE156796_family.xml.tgz’
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 130.14.250.10, 130.14.250.7, 2607:f220:41e:250::10, ...
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.10|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /geo/series/GSE156nnn/GSE156796/miniml ... done.
+==> SIZE GSE156796_family.xml.tgz ... 3638
+==> PASV ... done.    ==> RETR GSE156796_family.xml.tgz ... done.
+Length: 3638 (3.6K) (unauthoritative)
+
+     0K ...                                                   100%  713K=0.005s
+
+2023-02-13 14:12:40 (713 KB/s) - ‘GSE156796_family.xml.tgz’ saved [3638]
+

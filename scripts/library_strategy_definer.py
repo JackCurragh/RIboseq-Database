@@ -52,7 +52,7 @@ def scores_evaluator(n, df):
         elif RNA_des_score - ribo_des_score < 0:
             return "Ribo-seq study", evidence
         elif RNA_des_score - ribo_des_score == 0:
-            return "Inconclusive", evidence
+            return "NA", evidence
     else:
 
         evidence = '[' + ','.join(ribo_titl_found_terms + RNA_titl_found_terms) + ']'
@@ -61,7 +61,7 @@ def scores_evaluator(n, df):
         elif RNA_titl_score < ribo_titl_score:
             return "Ribo-seq study", evidence
         else:
-            return "Inconclusive", evidence
+            return "NA", evidence
 
 
 def define_ribosome_position(n,df):
@@ -82,7 +82,7 @@ def define_ribosome_position(n,df):
     elif initiating_score < elongating_score:
         return "Ribo-seq study","Elongating", evidence
     else:
-        return "Ribo-seq study", "Inconclusive", "No Key Words Found"
+        return "Ribo-seq study", "NA", "No Key Words Found"
     
 
 

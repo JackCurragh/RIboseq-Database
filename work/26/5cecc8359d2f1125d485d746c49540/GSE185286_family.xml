@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Sergey</First><Middle>E.</Middle><Last>Dmitriev</Last></Person>
+    <Email>sergey.dmitriev@belozersky.msu.ru</Email>
+    <Phone>+79032220066</Phone>
+    <Organization>Lomonosov Moscow State University</Organization>
+    <Address>
+      <Line>Leninskie Gory, 1</Line>
+      <City>Moscow</City>
+      <Postal-Code>119991</Postal-Code>
+      <Country>Russia</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Artyom</First><Middle>A</Middle><Last>Egorov</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib4">
+    <Person><First>Desislava</First><Middle>S</Middle><Last>Makeeva</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib5">
+    <Person><First>Nadezhda</First><Middle>E</Middle><Last>Makarova</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib6">
+    <Person><First>Olga</First><Middle>V</Middle><Last>Mitkevich</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib7">
+    <Person><First>Alexander</First><Middle>I</Middle><Last>Alexandrov</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib8">
+    <Person><First>Ivan</First><Middle>V</Middle><Last>Kulakovskiy</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib9">
+    <Person><First>Sergey</First><Middle>E</Middle><Last>Dmitriev</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL26302">
+    <Status database="GEO">
+      <Submission-Date>2019-03-14</Submission-Date>
+      <Release-Date>2019-03-14</Release-Date>
+      <Last-Update-Date>2019-03-14</Last-Update-Date>
+    </Status>
+    <Title>NextSeq 550 (Saccharomyces cerevisiae)</Title>
+    <Accession database="GEO">GPL26302</Accession>
+    <Technology>high-throughput sequencing</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM5610123">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_wt_1_b1_s2</Title>
+    <Accession database="GEO">GSM5610123</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610123/suppl/GSM5610123_rna_wt_1_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045095" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485358" />
+  </Sample>
+
+  <Sample iid="GSM5610124">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_wt_2_b4_s2</Title>
+    <Accession database="GEO">GSM5610124</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+4
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610124/suppl/GSM5610124_rna_wt_2_b4_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045099" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485359" />
+  </Sample>
+
+  <Sample iid="GSM5610125">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_wt_3_b4_s2</Title>
+    <Accession database="GEO">GSM5610125</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+4
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610125/suppl/GSM5610125_rna_wt_3_b4_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045100" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485360" />
+  </Sample>
+
+  <Sample iid="GSM5610126">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_wt_4_b1_s2</Title>
+    <Accession database="GEO">GSM5610126</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610126/suppl/GSM5610126_rna_wt_4_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045101" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485361" />
+  </Sample>
+
+  <Sample iid="GSM5610127">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_wt_5_b1_s2</Title>
+    <Accession database="GEO">GSM5610127</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610127/suppl/GSM5610127_rna_wt_5_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045102" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485362" />
+  </Sample>
+
+  <Sample iid="GSM5610128">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_gir2_1_b2_s2</Title>
+    <Accession database="GEO">GSM5610128</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+2
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610128/suppl/GSM5610128_rna_gir2_1_b2_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045103" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485363" />
+  </Sample>
+
+  <Sample iid="GSM5610129">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_gir2_2_b2_s2</Title>
+    <Accession database="GEO">GSM5610129</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+2
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610129/suppl/GSM5610129_rna_gir2_2_b2_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045104" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485364" />
+  </Sample>
+
+  <Sample iid="GSM5610130">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_gir2_3_b2_s2</Title>
+    <Accession database="GEO">GSM5610130</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+2
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610130/suppl/GSM5610130_rna_gir2_3_b2_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045105" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485365" />
+  </Sample>
+
+  <Sample iid="GSM5610131">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_gir2_4_b1_s2</Title>
+    <Accession database="GEO">GSM5610131</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610131/suppl/GSM5610131_rna_gir2_4_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045106" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485366" />
+  </Sample>
+
+  <Sample iid="GSM5610132">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_pub1_1_b3_s2</Title>
+    <Accession database="GEO">GSM5610132</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+3
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610132/suppl/GSM5610132_rna_pub1_1_b3_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045107" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485367" />
+  </Sample>
+
+  <Sample iid="GSM5610133">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_pub1_2_b3_s2</Title>
+    <Accession database="GEO">GSM5610133</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+3
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610133/suppl/GSM5610133_rna_pub1_2_b3_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045108" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485368" />
+  </Sample>
+
+  <Sample iid="GSM5610134">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_pub1_3_b3_s2</Title>
+    <Accession database="GEO">GSM5610134</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+3
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610134/suppl/GSM5610134_rna_pub1_3_b3_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045109" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485369" />
+  </Sample>
+
+  <Sample iid="GSM5610135">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_pub1_4_b4_s2</Title>
+    <Accession database="GEO">GSM5610135</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+4
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610135/suppl/GSM5610135_rna_pub1_4_b4_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045110" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485370" />
+  </Sample>
+
+  <Sample iid="GSM5610136">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>rna_pub1_5_b1_s2</Title>
+    <Accession database="GEO">GSM5610136</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Total RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610136/suppl/GSM5610136_rna_pub1_5_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045111" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485371" />
+  </Sample>
+
+  <Sample iid="GSM5610137">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_wt_1_b1_s2</Title>
+    <Accession database="GEO">GSM5610137</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610137/suppl/GSM5610137_ribo_wt_1_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045112" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485372" />
+  </Sample>
+
+  <Sample iid="GSM5610138">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_wt_2_b4_s2</Title>
+    <Accession database="GEO">GSM5610138</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+4
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610138/suppl/GSM5610138_ribo_wt_2_b4_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045113" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485373" />
+  </Sample>
+
+  <Sample iid="GSM5610139">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_wt_3_b4_s2</Title>
+    <Accession database="GEO">GSM5610139</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+4
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610139/suppl/GSM5610139_ribo_wt_3_b4_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045114" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485374" />
+  </Sample>
+
+  <Sample iid="GSM5610140">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_wt_4_b1_s2</Title>
+    <Accession database="GEO">GSM5610140</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+wt
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610140/suppl/GSM5610140_ribo_wt_4_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045115" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485375" />
+  </Sample>
+
+  <Sample iid="GSM5610141">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_gir2_1_b2_s2</Title>
+    <Accession database="GEO">GSM5610141</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+2
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610141/suppl/GSM5610141_ribo_gir2_1_b2_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045116" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485376" />
+  </Sample>
+
+  <Sample iid="GSM5610142">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_gir2_2_b2_s2</Title>
+    <Accession database="GEO">GSM5610142</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+2
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610142/suppl/GSM5610142_ribo_gir2_2_b2_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045117" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485377" />
+  </Sample>
+
+  <Sample iid="GSM5610143">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_gir2_3_b2_s2</Title>
+    <Accession database="GEO">GSM5610143</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+2
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610143/suppl/GSM5610143_ribo_gir2_3_b2_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045118" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485378" />
+  </Sample>
+
+  <Sample iid="GSM5610144">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_gir2_4_b1_s2</Title>
+    <Accession database="GEO">GSM5610144</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+gir2delta
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 gir2::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610144/suppl/GSM5610144_ribo_gir2_4_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045119" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485379" />
+  </Sample>
+
+  <Sample iid="GSM5610145">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_pub1_1_b3_s2</Title>
+    <Accession database="GEO">GSM5610145</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+3
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610145/suppl/GSM5610145_ribo_pub1_1_b3_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045120" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485380" />
+  </Sample>
+
+  <Sample iid="GSM5610146">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_pub1_2_b3_s2</Title>
+    <Accession database="GEO">GSM5610146</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+3
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610146/suppl/GSM5610146_ribo_pub1_2_b3_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045121" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485381" />
+  </Sample>
+
+  <Sample iid="GSM5610147">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_pub1_3_b3_s2</Title>
+    <Accession database="GEO">GSM5610147</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+3
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610147/suppl/GSM5610147_ribo_pub1_3_b3_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045122" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485382" />
+  </Sample>
+
+  <Sample iid="GSM5610148">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-10-12</Last-Update-Date>
+    </Status>
+    <Title>ribo_pub1_4_b1_s2</Title>
+    <Accession database="GEO">GSM5610148</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>yeast cell</Source>
+      <Organism taxid="4932">Saccharomyces cerevisiae</Organism>
+      <Characteristics tag="strain">
+pub1delta
+      </Characteristics>
+      <Characteristics tag="batch">
+1
+      </Characteristics>
+      <Characteristics tag="genotype">
+MATalpha his3delta1 leu2delta0 lys2delta0 ura3delta0 pub1::KanMX
+      </Characteristics>
+      <Treatment-Protocol>
+Cells were collected by vacuum filtration, separated from the filter with a plastic scraper and flash frozen in liquid nitrogen in a mortar and ground with a pestle with addition of polysome lysis buffer (20 mM Tris pH 8.0, 140 mM KCl, 1.5 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) with constant addition of liquid nitrogen.
+      </Treatment-Protocol>
+      <Growth-Protocol>
+The cells were grown in YPD (2% glucose, 2% peptone, 1% yeast extract) at 30℃ and 220 rpm to exponential growth stage (OD=0.5-0.6).
+      </Growth-Protocol>
+      <Molecule>total RNA</Molecule>
+      <Extract-Protocol>
+Cell lysates were clarified by two sequential centrifugation steps - 3000g, 5 minutes, 4℃, and 20000g, 10 minutes, 4℃. Part of the cell lysate was used for mRNA isolation using Oligo(dT) beads.  Another part was treated with ribonuclease I for polysome disassembly and applied to a linear 10-50% sucrose gradient in fractionation buffer (20 mM Tris pH 8.0, 140 mM KCl, 15 mM MgCl2, 1 mM DTT, 0.1 mg/ml cycloheximide, 1% Triton) and separated on a SW-41 rotor (Beckman) at 35000 rpm, 3 hours, 4℃. Subsequently, ribosome-bound RNA fragments were collected from the monosome fraction. Ribosome-bound RNA was isolated using acidic-phenol extraction.
+cDNA libraries for Ribo-Seq and RNA-Seq were constructed in parallel using standard ribosomal profiling library construction protocol (described in Kasari et al., 2019 DOI: 10.1093/nar/gkz600). Importantly, cycloheximide was added to the lysis buffer but not to the growth media.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Ribosome-bound RNA
+    </Description>
+    <Data-Processing>
+Reads were trimmed using cutadapt v. 2.10 with the following parameters for RNA-Seq (-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --minimum-length 20 -q 20) and Ribo-Seq samples (-a CTGTAGGCACCATCAATAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --trimmed-only -q 20).
+Additionally for Ribo-Seq, the reads were deduplicated with seqkit rmdup v. 0.10.1, and unique barcodes were then removed with cutadapt v. 2.10 (-q 20 --minimum-length 20 -u -4).
+Afterwards, reads were aligned against eukaryotic rRNA sequence set obtained from silva-euk and rfam databases using bowtie2 v. 1.2.3. Only unmapped non-rRNA reads were saved for the further analysis.
+Read mapping and counting against the Saccharomyces_cerevisiae.R64-1-1.95 (Ensembl) genome assembly was performed with STAR v. 2.7.9a.
+Genome_build: Ensembl Saccharomyces_cerevisiae.R64-1-1.95 (genome-build-accession GCA_000146045.2)
+Supplementary_files_format_and_content: Tab-separated text files containing read counts per gene as estimated by STAR.
+    </Data-Processing>
+    <Platform-Ref ref="GPL26302" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>NextSeq 550</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5610nnn/GSM5610148/suppl/GSM5610148_ribo_pub1_4_b1_s2.tsv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN22045123" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX12485383" />
+  </Sample>
+
+  <Series iid="GSE185286">
+    <Status database="GEO">
+      <Submission-Date>2021-10-04</Submission-Date>
+      <Release-Date>2021-10-11</Release-Date>
+      <Last-Update-Date>2021-12-15</Last-Update-Date>
+    </Status>
+    <Title>RNA Sequencing and Ribosome profiling of GIR2 and PUB1 knockout yeast strains.</Title>
+    <Accession database="GEO">GSE185286</Accession>
+    <Pubmed-ID>34900236</Pubmed-ID>
+    <Summary>
+We present ribosome profiling and RNA-Seq data for the wild type BY4742 S. cerevisiae strain, and strains with the complete individual deletions of the GIR2 and PUB1 genes.
+    </Summary>
+    <Overall-Design>
+Yeast cells of 3 different S. cerevisiae strains, namely: wt, gir2Δ, pub1Δ were maintained in YPD media. The libraries were sequenced, resulting in 14 RNA-Seq and 12 Ribo-Seq data sets.
+    </Overall-Design>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Type>Other</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contributor-Ref ref="contrib4" position="2" />
+    <Contributor-Ref ref="contrib5" position="3" />
+    <Contributor-Ref ref="contrib6" position="4" />
+    <Contributor-Ref ref="contrib7" position="5" />
+    <Contributor-Ref ref="contrib8" position="6" />
+    <Contributor-Ref ref="contrib9" position="7" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM5610123" />
+    <Sample-Ref ref="GSM5610124" />
+    <Sample-Ref ref="GSM5610125" />
+    <Sample-Ref ref="GSM5610126" />
+    <Sample-Ref ref="GSM5610127" />
+    <Sample-Ref ref="GSM5610128" />
+    <Sample-Ref ref="GSM5610129" />
+    <Sample-Ref ref="GSM5610130" />
+    <Sample-Ref ref="GSM5610131" />
+    <Sample-Ref ref="GSM5610132" />
+    <Sample-Ref ref="GSM5610133" />
+    <Sample-Ref ref="GSM5610134" />
+    <Sample-Ref ref="GSM5610135" />
+    <Sample-Ref ref="GSM5610136" />
+    <Sample-Ref ref="GSM5610137" />
+    <Sample-Ref ref="GSM5610138" />
+    <Sample-Ref ref="GSM5610139" />
+    <Sample-Ref ref="GSM5610140" />
+    <Sample-Ref ref="GSM5610141" />
+    <Sample-Ref ref="GSM5610142" />
+    <Sample-Ref ref="GSM5610143" />
+    <Sample-Ref ref="GSM5610144" />
+    <Sample-Ref ref="GSM5610145" />
+    <Sample-Ref ref="GSM5610146" />
+    <Sample-Ref ref="GSM5610147" />
+    <Sample-Ref ref="GSM5610148" />
+    <Supplementary-Data type="TAR">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE185nnn/GSE185286/suppl/GSE185286_RAW.tar
+    </Supplementary-Data>
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE185nnn/GSE185286/suppl/GSE185286_gene_counts_s2.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA768456" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRP339974" />
+  </Series>
+
+</MINiML>
