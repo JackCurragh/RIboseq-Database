@@ -24,6 +24,9 @@ def get_sample_info(sample):
 
 
     for section in sample:
+        print(section)
+        print(sample[section])
+        print()
 
         if section == "Title":
             title = sample["Title"]

@@ -1,0 +1,73 @@
+<!-- DocSum DTD for biosample database -->
+
+<!--~~ !dtd
+~~json
+   <json type='esummary' version='0.3'>
+       <config lcnames='true'/>
+   </json>
+~~-->
+
+<!ENTITY	 % T_string		"(#PCDATA)">
+<!ENTITY	 % T_int		"(#PCDATA)">
+
+<!-- Members definition of Structure type: T_DocSum -->
+<!ELEMENT	Title		%T_string;>
+<!ELEMENT	Accession		%T_string;>
+<!ELEMENT	Date		%T_string;>
+<!ELEMENT	PublicationDate		%T_string;>
+<!ELEMENT	ModificationDate		%T_string;>
+<!ELEMENT	Organization		%T_string;>
+<!ELEMENT	Taxonomy		%T_string;>
+<!ELEMENT	Organism		%T_string;>
+<!ELEMENT	SourceSample		%T_string;>
+<!ELEMENT	SampleData		%T_string;>
+<!ELEMENT	Identifiers		%T_string;>
+<!ELEMENT	Infraspecies		%T_string;>
+<!ELEMENT	Package		%T_string;>
+<!--~~ <SortKey>
+~~json <number/>
+~~-->
+<!ELEMENT	SortKey		%T_int;>
+<!ELEMENT	error		%T_string;>
+
+<!-- Definition of Structure type: T_DocSum -->
+<!--~~ <DocumentSummary>
+~~json <object name='@uid'/>
+~~-->
+<!ENTITY	 % T_DocSum "((
+			Title?,
+			Accession?,
+			Date?,
+			PublicationDate?,
+			ModificationDate?,
+			Organization?,
+			Taxonomy?,
+			Organism?,
+			SourceSample?,
+			SampleData?,
+			Identifiers?,
+			Infraspecies?,
+			Package?,
+			SortKey?
+			)
+			| error)
+			">
+
+<!ELEMENT DocumentSummary %T_DocSum;>
+<!ATTLIST DocumentSummary uid CDATA #IMPLIED>
+
+<!ELEMENT DbBuild      %T_string;>
+<!ELEMENT DocumentSummarySet (DbBuild?, DocumentSummary*)>
+<!ATTLIST DocumentSummarySet status CDATA #REQUIRED>
+<!--~~ <DocumentSummarySet>
+~~json
+   <object key="result">
+       <array key="uids" select='DocumentSummary/@uid'/>
+       <members select='DocumentSummary'/>
+   </object>
+~~-->
+<!--~~ <eSummaryResult>
+~~ json <member/>
+~~-->
+
+<!ELEMENT eSummaryResult (DocumentSummarySet?)>
