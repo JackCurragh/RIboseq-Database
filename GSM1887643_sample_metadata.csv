@@ -1,0 +1,15 @@
+0
+ribosome profiling
+SAMN04093818
+2015/11/13
+2015/11/13
+2015/11/13
+"Uwe Ohler, BIMSM, MDC Berlin"
+9606
+Homo sapiens
+BioSample:SAMN04093818
+"<BioSample access=""public"" publication_date=""2015-11-13T01:14:27.580"" last_update=""2015-11-13T01:19:57.977"" submission_date=""2015-09-17T12:01:34.000"" id=""4093818"" accession=""SAMN04093818"">   <Ids>     <Id db=""BioSample"" is_primary=""1"">SAMN04093818</Id>     <Id db=""SRA"">SRS1072728</Id>     <Id db=""GEO"">GSM1887643</Id>   </Ids>   <Description>     <Title>ribosome profiling</Title>     <Organism taxonomy_id=""9606"" taxonomy_name=""Homo sapiens"">       <OrganismName>Homo sapiens</OrganismName>     </Organism>   </Description>   <Owner>     <Name>Uwe Ohler, BIMSM, MDC Berlin</Name>     <Contacts>       <Contact email=""neelanjanmukherjee@gmail.com"">         <Name>           <First>Neelanjan</First>           <Last>Mukherjee</Last>         </Name>       </Contact>     </Contacts>   </Owner>   <Models>     <Model>Generic</Model>   </Models>   <Package display_name=""Generic"">Generic.1.0</Package>   <Attributes>     <Attribute attribute_name=""source_name"" harmonized_name=""source_name"" display_name=""source name"">HEK293</Attribute>     <Attribute attribute_name=""cell line"" harmonized_name=""cell_line"" display_name=""cell line"">HEK293</Attribute>   </Attributes>   <Links>     <Link type=""url"" label=""GEO Sample GSM1887643"">http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1887643</Link>     <Link type=""entrez"" target=""bioproject"" label=""PRJNA296059"">296059</Link>   </Links>   <Status status=""live"" when=""2015-11-13T01:14:28.091""/> </BioSample> "
+BioSample: SAMN04093818; SRA: SRS1072728; GEO: GSM1887643
+""
+Generic
+120151113
