@@ -1,152 +1,62 @@
-Feb-13 15:01:39.910 [main] DEBUG nextflow.cli.Launcher - $> nextflow run fetch_metadata.nf --input_csv data/ribosome_profiling_superset_n10.csv
-Feb-13 15:01:39.973 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
-Feb-13 15:01:40.049 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
-Feb-13 15:01:40.064 [main] INFO  nextflow.cli.CmdRun - Launching `fetch_metadata.nf` [spontaneous_almeida] DSL2 - revision: 2ac7e2bcb1
-Feb-13 15:01:40.079 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/jack/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
-Feb-13 15:01:40.080 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Feb-13 15:01:40.091 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Feb-13 15:01:40.092 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Feb-13 15:01:40.096 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Feb-13 15:01:40.109 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Feb-13 15:01:40.172 [main] DEBUG nextflow.Session - Session uuid: 1e1f42ee-231b-46d2-a394-5082f0fec3dc
-Feb-13 15:01:40.172 [main] DEBUG nextflow.Session - Run name: spontaneous_almeida
-Feb-13 15:01:40.175 [main] DEBUG nextflow.Session - Executor pool size: 8
-Feb-13 15:01:40.219 [main] DEBUG nextflow.cli.CmdRun - 
+Feb-13 15:07:52.288 [main] DEBUG nextflow.cli.Launcher - $> nextflow run fetch_metadata.nf --input_csv data/GSE73136_metadata.csv
+Feb-13 15:07:52.352 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Feb-13 15:07:52.427 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Feb-13 15:07:52.442 [main] INFO  nextflow.cli.CmdRun - Launching `fetch_metadata.nf` [ridiculous_hawking] DSL2 - revision: 2ac7e2bcb1
+Feb-13 15:07:52.456 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/jack/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Feb-13 15:07:52.458 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-13 15:07:52.469 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-13 15:07:52.470 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-13 15:07:52.474 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-13 15:07:52.486 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-13 15:07:52.545 [main] DEBUG nextflow.Session - Session uuid: 7a6c371e-2494-4552-95e0-d82647d84ce8
+Feb-13 15:07:52.545 [main] DEBUG nextflow.Session - Run name: ridiculous_hawking
+Feb-13 15:07:52.547 [main] DEBUG nextflow.Session - Executor pool size: 8
+Feb-13 15:07:52.594 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 22.04.5 build 5708
   Created: 15-07-2022 16:09 UTC (17:09 IST)
   System: Linux 5.15.0-58-generic
   Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.17+8-post-Ubuntu-1ubuntu220.04
   Encoding: UTF-8 (UTF-8)
-  Process: 410371@DellLaptop [127.0.1.1]
-  CPUs: 8 - Mem: 31 GB (10.9 GB) - Swap: 2 GB (105.8 MB)
-Feb-13 15:01:40.245 [main] DEBUG nextflow.Session - Work-dir: /home/jack/projects/Riboseq-Database/work [ext2/ext3]
-Feb-13 15:01:40.245 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jack/projects/Riboseq-Database/bin
-Feb-13 15:01:40.256 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Feb-13 15:01:40.272 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Feb-13 15:01:40.304 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Feb-13 15:01:40.317 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
-Feb-13 15:01:40.438 [main] DEBUG nextflow.Session - Session start invoked
-Feb-13 15:01:41.131 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Feb-13 15:01:41.680 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-13 15:01:41.680 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-13 15:01:41.684 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Feb-13 15:01:41.689 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=31 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
-Feb-13 15:01:41.772 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-13 15:01:41.772 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-13 15:01:41.782 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Feb-13 15:01:41.782 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Feb-13 15:01:41.786 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: ASSESS_LIBRARY_STRATEGY, metadata_flow:GET_GSE_REPORT, GET_GSE_REPORT, GET_CSV_FROM_XML, CHECK_METADATA_REPORT, metadata_flow:GET_CSV_FROM_XML, metadata_flow:ASSESS_LIBRARY_STRATEGY
-Feb-13 15:01:41.786 [main] DEBUG nextflow.Session - Ignite dataflow network (4)
-Feb-13 15:01:41.793 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > metadata_flow:GET_GSE_REPORT
-Feb-13 15:01:41.794 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > metadata_flow:GET_CSV_FROM_XML
-Feb-13 15:01:41.800 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > metadata_flow:ASSESS_LIBRARY_STRATEGY
-Feb-13 15:01:41.808 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Feb-13 15:01:41.812 [main] DEBUG nextflow.Session - Session await
-Feb-13 15:01:41.997 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.003 [Task submitter] INFO  nextflow.Session - [7d/9505e5] Submitted process > metadata_flow:GET_GSE_REPORT (6)
-Feb-13 15:01:42.009 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.009 [Task submitter] INFO  nextflow.Session - [2b/0c9efe] Submitted process > metadata_flow:GET_GSE_REPORT (3)
-Feb-13 15:01:42.014 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.015 [Task submitter] INFO  nextflow.Session - [ce/99f5d4] Submitted process > metadata_flow:GET_GSE_REPORT (4)
-Feb-13 15:01:42.020 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.022 [Task submitter] INFO  nextflow.Session - [fd/19a3c7] Submitted process > metadata_flow:GET_GSE_REPORT (1)
-Feb-13 15:01:42.026 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.027 [Task submitter] INFO  nextflow.Session - [90/397390] Submitted process > metadata_flow:GET_GSE_REPORT (5)
-Feb-13 15:01:42.035 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.035 [Task submitter] INFO  nextflow.Session - [2f/2dc227] Submitted process > metadata_flow:GET_GSE_REPORT (8)
-Feb-13 15:01:42.040 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.040 [Task submitter] INFO  nextflow.Session - [12/a3da25] Submitted process > metadata_flow:GET_GSE_REPORT (7)
-Feb-13 15:01:42.045 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:42.046 [Task submitter] INFO  nextflow.Session - [40/f473d8] Submitted process > metadata_flow:GET_GSE_REPORT (2)
-Feb-13 15:01:47.873 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: metadata_flow:GET_GSE_REPORT (2); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/40/f473d848112a79d4368af7446e0e10]
-Feb-13 15:01:47.882 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:47.882 [Task submitter] INFO  nextflow.Session - [da/b81ec0] Submitted process > metadata_flow:GET_GSE_REPORT (9)
-Feb-13 15:01:48.405 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: metadata_flow:GET_GSE_REPORT (4); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/ce/99f5d47bd22f4370a1b94bfcb98b9b]
-Feb-13 15:01:48.411 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:48.412 [Task submitter] INFO  nextflow.Session - [7d/b1b31a] Submitted process > metadata_flow:GET_GSE_REPORT (10)
-Feb-13 15:01:48.415 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: metadata_flow:GET_GSE_REPORT (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/fd/19a3c73faebcfe1b07a9425c3ebfc4]
-Feb-13 15:01:48.421 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:48.421 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: metadata_flow:GET_GSE_REPORT (5); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/90/397390bd154443e200f79545a9260a]
-Feb-13 15:01:48.421 [Task submitter] INFO  nextflow.Session - [a8/a2f141] Submitted process > metadata_flow:GET_CSV_FROM_XML (1)
-Feb-13 15:01:48.429 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: metadata_flow:GET_GSE_REPORT (7); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/12/a3da2556a2600f71b542047b053898]
-Feb-13 15:01:48.432 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:48.433 [Task submitter] INFO  nextflow.Session - [f3/f03f41] Submitted process > metadata_flow:GET_CSV_FROM_XML (2)
-Feb-13 15:01:48.440 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:48.440 [Task submitter] INFO  nextflow.Session - [8f/a0ca3a] Submitted process > metadata_flow:GET_CSV_FROM_XML (3)
-Feb-13 15:01:48.937 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: metadata_flow:GET_CSV_FROM_XML (3); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/8f/a0ca3adaa3652543f00ed169b34599]
-Feb-13 15:01:48.942 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:48.942 [Task submitter] INFO  nextflow.Session - [fd/166780] Submitted process > metadata_flow:GET_CSV_FROM_XML (5)
-Feb-13 15:01:48.971 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: metadata_flow:GET_CSV_FROM_XML (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/a8/a2f1410e043c56b4fac7abfbd4d838]
-Feb-13 15:01:48.973 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:48.974 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: metadata_flow:GET_CSV_FROM_XML (2); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/f3/f03f4188028af2240951b21b6f8d08]
-Feb-13 15:01:48.974 [Task submitter] INFO  nextflow.Session - [0d/c56194] Submitted process > metadata_flow:GET_CSV_FROM_XML (4)
-Feb-13 15:01:48.985 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:48.986 [Task submitter] INFO  nextflow.Session - [72/41de39] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (1)
-Feb-13 15:01:49.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/72/41de392f40fb166e6f4e0a1e83fb70]
-Feb-13 15:01:49.455 [Task monitor] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `data_dir` -- Initialise it to a default value eg. `params.data_dir = some_value`
-Feb-13 15:01:49.456 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:49.457 [Task monitor] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `GSE` -- Initialise it to a default value eg. `params.GSE = some_value`
-Feb-13 15:01:49.457 [Task submitter] INFO  nextflow.Session - [b0/ddd5fe] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (2)
-Feb-13 15:01:49.465 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:49.478 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=4; maxSize=4; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Feb-13 15:01:49.526 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: metadata_flow:GET_CSV_FROM_XML (5); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/fd/166780f074e31392fce4a30d28c5bb]
-Feb-13 15:01:49.532 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:49.532 [Task submitter] INFO  nextflow.Session - [12/c57767] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (3)
-Feb-13 15:01:49.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: metadata_flow:GET_CSV_FROM_XML (4); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/0d/c5619476240aadbaba9f6c21d33b51]
-Feb-13 15:01:49.545 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:49.546 [Task submitter] INFO  nextflow.Session - [c9/af2996] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (4)
-Feb-13 15:01:49.983 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (2); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/b0/ddd5fe0e0af5200f157d3300854ea5]
-Feb-13 15:01:49.984 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:49.985 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:49.985 [Task submitter] INFO  nextflow.Session - [11/1df7d6] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (5)
-Feb-13 15:01:50.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (3); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/12/c577679a9a11c21050a18d0f932903]
-Feb-13 15:01:50.089 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:50.122 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (4); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/c9/af29964833871c347143ed3ef43944]
-Feb-13 15:01:50.123 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:50.422 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (5); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/11/1df7d618291b3442b4488831e772ea]
-Feb-13 15:01:50.423 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:50.982 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: metadata_flow:GET_GSE_REPORT (8); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/2f/2dc227841321f3dff77f224b241bcf]
-Feb-13 15:01:51.007 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:51.007 [Task submitter] INFO  nextflow.Session - [b1/ad0f0c] Submitted process > metadata_flow:GET_CSV_FROM_XML (6)
-Feb-13 15:01:51.398 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: metadata_flow:GET_CSV_FROM_XML (6); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/b1/ad0f0c9d461442f2ca93cb6564a519]
-Feb-13 15:01:51.405 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:51.405 [Task submitter] INFO  nextflow.Session - [80/e72daf] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (6)
-Feb-13 15:01:51.665 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: metadata_flow:GET_GSE_REPORT (6); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/7d/9505e55661970dd45123dd8ff4064a]
-Feb-13 15:01:51.670 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:51.670 [Task submitter] INFO  nextflow.Session - [eb/ac5295] Submitted process > metadata_flow:GET_CSV_FROM_XML (7)
-Feb-13 15:01:51.789 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (6); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/80/e72daf112919bf46fba4dfa79f917b]
-Feb-13 15:01:51.790 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:52.068 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: metadata_flow:GET_CSV_FROM_XML (7); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/eb/ac52956ffee16a860b119b921b564e]
-Feb-13 15:01:52.074 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:52.074 [Task submitter] INFO  nextflow.Session - [d0/c7567b] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (7)
-Feb-13 15:01:52.369 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: metadata_flow:GET_GSE_REPORT (3); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/2b/0c9efee8d875b4c34360a24217fbdd]
-Feb-13 15:01:52.375 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:52.375 [Task submitter] INFO  nextflow.Session - [f0/376b29] Submitted process > metadata_flow:GET_CSV_FROM_XML (8)
-Feb-13 15:01:52.494 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (7); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/d0/c7567b249a34aa7f3d24c960db4d7e]
-Feb-13 15:01:52.495 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:52.781 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: metadata_flow:GET_CSV_FROM_XML (8); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/f0/376b292fdf7d3d72b7ece8f21b2e82]
-Feb-13 15:01:52.790 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:52.790 [Task submitter] INFO  nextflow.Session - [46/4c5d34] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (8)
-Feb-13 15:01:53.162 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (8); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/46/4c5d34f7f70f19f11b665a15acf295]
-Feb-13 15:01:53.163 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:54.254 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: metadata_flow:GET_GSE_REPORT (9); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/da/b81ec0f03ed43d89a20d2b7846132b]
-Feb-13 15:01:54.258 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:54.258 [Task submitter] INFO  nextflow.Session - [b2/43dddc] Submitted process > metadata_flow:GET_CSV_FROM_XML (9)
-Feb-13 15:01:54.657 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: metadata_flow:GET_CSV_FROM_XML (9); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/b2/43dddcb8e2b73d40e40386b658b7fe]
-Feb-13 15:01:54.662 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:54.662 [Task submitter] INFO  nextflow.Session - [9b/6b2026] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (9)
-Feb-13 15:01:55.029 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (9); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/9b/6b20262dbc0ebf40cf3393b8fae0ed]
-Feb-13 15:01:55.030 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:57.773 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: metadata_flow:GET_GSE_REPORT (10); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/7d/b1b31a84600a26f3c156914298bcba]
-Feb-13 15:01:57.793 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:57.794 [Task submitter] INFO  nextflow.Session - [da/4e0d37] Submitted process > metadata_flow:GET_CSV_FROM_XML (10)
-Feb-13 15:01:58.221 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: metadata_flow:GET_CSV_FROM_XML (10); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/da/4e0d37f26e81b96607c64cc9e4621d]
-Feb-13 15:01:58.226 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Feb-13 15:01:58.226 [Task submitter] INFO  nextflow.Session - [5d/d4f8c7] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (10)
-Feb-13 15:01:58.578 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (10); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/5d/d4f8c7df4981a85569c344da6a10d6]
-Feb-13 15:01:58.579 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
-Feb-13 15:01:58.580 [main] DEBUG nextflow.Session - Session await > all process finished
-Feb-13 15:01:58.680 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Feb-13 15:01:58.700 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=30; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1m 23s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=8; peakCpus=8; peakMemory=0; ]
-Feb-13 15:01:58.802 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Feb-13 15:01:58.817 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+  Process: 411991@DellLaptop [127.0.1.1]
+  CPUs: 8 - Mem: 31 GB (10.8 GB) - Swap: 2 GB (112.2 MB)
+Feb-13 15:07:52.618 [main] DEBUG nextflow.Session - Work-dir: /home/jack/projects/Riboseq-Database/work [ext2/ext3]
+Feb-13 15:07:52.618 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jack/projects/Riboseq-Database/bin
+Feb-13 15:07:52.627 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-13 15:07:52.639 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-13 15:07:52.667 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-13 15:07:52.680 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Feb-13 15:07:52.790 [main] DEBUG nextflow.Session - Session start invoked
+Feb-13 15:07:53.560 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-13 15:07:54.081 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-13 15:07:54.082 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-13 15:07:54.088 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-13 15:07:54.094 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=31 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Feb-13 15:07:54.198 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-13 15:07:54.199 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-13 15:07:54.215 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-13 15:07:54.215 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-13 15:07:54.219 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: ASSESS_LIBRARY_STRATEGY, metadata_flow:GET_GSE_REPORT, GET_GSE_REPORT, GET_CSV_FROM_XML, CHECK_METADATA_REPORT, metadata_flow:GET_CSV_FROM_XML, metadata_flow:ASSESS_LIBRARY_STRATEGY
+Feb-13 15:07:54.220 [main] DEBUG nextflow.Session - Ignite dataflow network (4)
+Feb-13 15:07:54.225 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > metadata_flow:GET_GSE_REPORT
+Feb-13 15:07:54.226 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > metadata_flow:GET_CSV_FROM_XML
+Feb-13 15:07:54.229 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > metadata_flow:ASSESS_LIBRARY_STRATEGY
+Feb-13 15:07:54.238 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Feb-13 15:07:54.238 [main] DEBUG nextflow.Session - Session await
+Feb-13 15:07:54.416 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-13 15:07:54.423 [Task submitter] INFO  nextflow.Session - [10/dea6ca] Submitted process > metadata_flow:GET_GSE_REPORT (1)
+Feb-13 15:08:02.731 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: metadata_flow:GET_GSE_REPORT (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/10/dea6ca6c63a3aaf9a87eef2b3a0b43]
+Feb-13 15:08:02.786 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-13 15:08:02.787 [Task submitter] INFO  nextflow.Session - [0d/4459c7] Submitted process > metadata_flow:GET_CSV_FROM_XML (1)
+Feb-13 15:08:03.200 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: metadata_flow:GET_CSV_FROM_XML (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/0d/4459c7a621a31e9cb7fd4998c04b3f]
+Feb-13 15:08:03.215 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-13 15:08:03.216 [Task submitter] INFO  nextflow.Session - [94/6a04bc] Submitted process > metadata_flow:ASSESS_LIBRARY_STRATEGY (1)
+Feb-13 15:08:03.577 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: metadata_flow:ASSESS_LIBRARY_STRATEGY (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jack/projects/Riboseq-Database/work/94/6a04bc875d6f9835195aa03b062431]
+Feb-13 15:08:03.579 [Task monitor] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `data_dir` -- Initialise it to a default value eg. `params.data_dir = some_value`
+Feb-13 15:08:03.581 [Task monitor] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `GSE` -- Initialise it to a default value eg. `params.GSE = some_value`
+Feb-13 15:08:03.586 [Task monitor] WARN  nextflow.processor.PublishDir - Process `metadata_flow:ASSESS_LIBRARY_STRATEGY` publishDir path contains a variable with a null value
+Feb-13 15:08:03.594 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=4; maxSize=4; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-13 15:08:03.596 [main] DEBUG nextflow.Session - Session await > all process finished
+Feb-13 15:08:03.597 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-13 15:08:03.604 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=8.9s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Feb-13 15:08:03.645 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-13 15:08:03.651 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
