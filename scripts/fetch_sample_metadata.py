@@ -5,8 +5,6 @@ This script is used to retrieve the metadata for a specific sample from Entrez.
  the platform, the title, the description, the protocol, the tags and the source name.
 
 
-
-
 '''
 
 import argparse
